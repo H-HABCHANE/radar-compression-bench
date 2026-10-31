@@ -1,0 +1,5 @@
+dataset,sigma_par_voie,h_theorique,h_mesuree,h_apres_delta,taux_max,taux_max_delta
+noise_s16,11.314,5.5471,5.5473,6.0473,2.8843,2.6458
+noise_s4,2.8284,3.5471,3.5542,4.0543,4.5018,3.9464
+noise_s64,45.255,7.5471,7.5471,8.0469,2.12,1.9883
+scene_s16,11.314,5.5471,10.408,6.532,1.5373,2.4495

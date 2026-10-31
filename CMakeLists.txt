@@ -1,0 +1,30 @@
+cmake_minimum_required(VERSION 3.16)
+project(radar_compression_bench C)
+
+set(CMAKE_C_STANDARD 11)
+if(NOT CMAKE_BUILD_TYPE)
+  set(CMAKE_BUILD_TYPE Release)
+endif()
+set(CMAKE_C_FLAGS_RELEASE "-O3 -march=native")
+add_compile_options(-Wall -Wextra)
+
+find_package(OpenMP REQUIRED)
+find_package(ZLIB REQUIRED)
+set(COMPRESSORS ZLIB::ZLIB)
+foreach(lib lz4 zstd blosc2)
+  find_path(${lib}_INCLUDE NAMES ${lib}.h REQUIRED)
+  find_library(${lib}_LIB NAMES ${lib} REQUIRED)
+  list(APPEND COMPRESSORS ${${lib}_LIB})
+  include_directories(${${lib}_INCLUDE})
+endforeach()
+
+add_library(filters src/filters.c)
+target_include_directories(filters PUBLIC src)
+
+add_executable(bench src/bench.c)
+target_link_libraries(bench PRIVATE filters ${COMPRESSORS} OpenMP::OpenMP_C)
+
+enable_testing()
+add_executable(test_filters tests/test_filters.c)
+target_link_libraries(test_filters PRIVATE filters)
+add_test(NAME filters COMMAND test_filters)
