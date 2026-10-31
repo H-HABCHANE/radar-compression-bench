@@ -1,0 +1,5 @@
+etape,comp_GBs_1thread,decomp_GBs_1thread,comp_GBs_4threads,decomp_GBs_4threads
+"1. bitshuffle scalaire",0.136,0.260,0.514,0.929
+"2. bitshuffle AVX2 (movemask)",0.288,0.238,0.883,0.765
+"3. + écriture par lignes de cache",0.420,0.787,1.050,1.482
+"4. + delta, zigzag et bitshuffle fusionnés",0.589,1.025,1.891,1.967

@@ -1,0 +1,436 @@
+data/noise_s4.bin : 256 Mio, blocs de 1024 Kio, 256 blocs
+chaîne                                         thr     taux   comp. Go/s décomp. Go/s
+copie (memcpy)                                    1    1.000        5.336        4.621
+copie (memcpy)                                    2    1.000        5.883        5.103
+copie (memcpy)                                    4    1.000        5.753        5.417
+copie (memcpy)                                    8    1.000        5.633        5.232
+zlib-1                                            1    3.023        0.049        0.165
+zlib-1                                            2    3.023        0.094        0.326
+zlib-1                                            4    3.023        0.186        0.648
+zlib-1                                            8    3.023        0.233        0.819
+lz4                                               1    1.980        0.259        1.139
+lz4                                               2    1.980        0.514        2.162
+lz4                                               4    1.980        1.017        4.104
+lz4                                               8    1.980        1.590        4.057
+zstd-1                                            1    3.103        0.130        0.468
+zstd-1                                            2    3.103        0.240        0.859
+zstd-1                                            4    3.103        0.468        1.691
+zstd-1                                            8    3.103        0.560        1.559
+zstd-3                                            1    3.411        0.109        0.458
+zstd-3                                            2    3.411        0.190        0.814
+zstd-3                                            4    3.411        0.304        1.362
+zstd-3                                            8    3.411        0.296        1.232
+[seul] bitshuffle scalaire                        1    1.000        0.187        0.343
+[seul] bitshuffle scalaire                        2    1.000        0.336        0.614
+[seul] bitshuffle scalaire                        4    1.000        0.667        1.200
+[seul] bitshuffle scalaire                        8    1.000        1.162        1.364
+[seul] bitshuffle AVX2                            1    1.000        1.874        1.907
+[seul] bitshuffle AVX2                            2    1.000        3.481        3.233
+[seul] bitshuffle AVX2                            4    1.000        3.020        3.616
+[seul] bitshuffle AVX2                            8    1.000        2.664        2.777
+[seul] delta + zigzag + bitshuffle                1    1.000        1.777        1.565
+[seul] delta + zigzag + bitshuffle                2    1.000        3.358        2.477
+[seul] delta + zigzag + bitshuffle                4    1.000        3.122        2.023
+[seul] delta + zigzag + bitshuffle                8    1.000        2.651        1.751
+shuffle + lz4                                     1    1.376        0.347        1.083
+shuffle + lz4                                     2    1.376        0.621        1.857
+shuffle + lz4                                     4    1.376        1.188        2.648
+shuffle + lz4                                     8    1.376        1.510        2.530
+shuffle + zstd-1                                  1    3.134        0.273        0.574
+shuffle + zstd-1                                  2    3.134        0.479        0.995
+shuffle + zstd-1                                  4    3.134        0.922        1.806
+shuffle + zstd-1                                  8    3.134        0.967        1.788
+bitshuffle + lz4                                  1    0.996        1.704        1.921
+bitshuffle + lz4                                  2    0.996        3.135        3.259
+bitshuffle + lz4                                  4    0.996        3.080        3.643
+bitshuffle + lz4                                  8    0.996        2.402        2.702
+bitshuffle + zstd-1                               1    3.905        1.010        1.936
+bitshuffle + zstd-1                               2    3.905        1.837        3.403
+bitshuffle + zstd-1                               4    3.905        3.036        4.560
+bitshuffle + zstd-1                               8    3.905        2.787        3.054
+zigzag + bitshuffle + lz4                         1    3.778        1.215        1.336
+zigzag + bitshuffle + lz4                         2    3.778        2.174        2.133
+zigzag + bitshuffle + lz4                         4    3.778        2.606        2.019
+zigzag + bitshuffle + lz4                         8    3.778        1.997        1.820
+zigzag + bitshuffle + zstd-1                      1    4.295        0.667        1.220
+zigzag + bitshuffle + zstd-1                      2    4.295        1.172        1.891
+zigzag + bitshuffle + zstd-1                      4    4.295        1.776        2.058
+zigzag + bitshuffle + zstd-1                      8    4.295        1.709        1.845
+delta + zigzag + bitshuffle + lz4                 1    3.440        1.030        1.359
+delta + zigzag + bitshuffle + lz4                 2    3.440        1.917        2.256
+delta + zigzag + bitshuffle + lz4                 4    3.440        3.494        2.180
+delta + zigzag + bitshuffle + lz4                 8    3.440        3.441        1.812
+delta + zigzag + bitshuffle scalaire + zstd-1     1    3.803        0.156        0.311
+delta + zigzag + bitshuffle scalaire + zstd-1     2    3.803        0.269        0.542
+delta + zigzag + bitshuffle scalaire + zstd-1     4    3.803        0.523        1.021
+delta + zigzag + bitshuffle scalaire + zstd-1     8    3.803        0.842        1.172
+delta + zigzag + bitshuffle + zstd-1              1    3.803        0.582        1.231
+delta + zigzag + bitshuffle + zstd-1              2    3.803        0.964        1.614
+delta + zigzag + bitshuffle + zstd-1              4    3.803        1.706        2.022
+delta + zigzag + bitshuffle + zstd-1              8    3.803        1.807        1.738
+delta + zigzag + bitshuffle + zstd--1             1    3.563        0.760        1.365
+delta + zigzag + bitshuffle + zstd--1             2    3.563        1.439        2.163
+delta + zigzag + bitshuffle + zstd--1             4    3.563        2.390        2.238
+delta + zigzag + bitshuffle + zstd--1             8    3.563        2.501        1.856
+blosc2 shuffle + lz4                              1    1.413        0.215        0.737
+blosc2 shuffle + lz4                              2    1.413        0.378        1.312
+blosc2 shuffle + lz4                              4    1.413        0.754        2.439
+blosc2 shuffle + lz4                              8    1.413        1.203        2.871
+blosc2 bitshuffle + lz4                           1    3.401        0.841        1.423
+blosc2 bitshuffle + lz4                           2    3.401        1.454        2.465
+blosc2 bitshuffle + lz4                           4    3.401        2.799        4.428
+blosc2 bitshuffle + lz4                           8    3.401        3.591        4.660
+blosc2 bitshuffle + zstd-1                        1    3.606        0.601        1.473
+blosc2 bitshuffle + zstd-1                        2    3.606        1.118        2.534
+blosc2 bitshuffle + zstd-1                        4    3.606        2.176        4.667
+blosc2 bitshuffle + zstd-1                        8    3.606        2.721        5.134
+data/noise_s16.bin : 256 Mio, blocs de 1024 Kio, 256 blocs
+chaîne                                         thr     taux   comp. Go/s décomp. Go/s
+copie (memcpy)                                    1    1.000        5.404        4.941
+copie (memcpy)                                    2    1.000        6.188        5.551
+copie (memcpy)                                    4    1.000        6.265        5.635
+copie (memcpy)                                    8    1.000        5.760        5.285
+zlib-1                                            1    2.159        0.044        0.186
+zlib-1                                            2    2.159        0.085        0.356
+zlib-1                                            4    2.159        0.159        0.653
+zlib-1                                            8    2.159        0.174        0.696
+lz4                                               1    1.284        0.176        1.226
+lz4                                               2    1.284        0.361        2.417
+lz4                                               4    1.284        0.735        4.471
+lz4                                               8    1.284        0.950        4.519
+zstd-1                                            1    1.978        0.136        0.630
+zstd-1                                            2    1.978        0.265        1.223
+zstd-1                                            4    1.978        0.497        2.262
+zstd-1                                            8    1.978        0.536        2.595
+zstd-3                                            1    2.123        0.053        0.249
+zstd-3                                            2    2.123        0.097        0.558
+zstd-3                                            4    2.123        0.150        1.062
+zstd-3                                            8    2.123        0.069        0.839
+[seul] bitshuffle scalaire                        1    1.000        0.166        0.292
+[seul] bitshuffle scalaire                        2    1.000        0.327        0.591
+[seul] bitshuffle scalaire                        4    1.000        0.641        1.091
+[seul] bitshuffle scalaire                        8    1.000        1.029        1.222
+[seul] bitshuffle AVX2                            1    1.000        1.688        1.703
+[seul] bitshuffle AVX2                            2    1.000        2.660        2.762
+[seul] bitshuffle AVX2                            4    1.000        2.332        2.654
+[seul] bitshuffle AVX2                            8    1.000        2.340        2.422
+[seul] delta + zigzag + bitshuffle                1    1.000        1.667        1.362
+[seul] delta + zigzag + bitshuffle                2    1.000        2.754        1.821
+[seul] delta + zigzag + bitshuffle                4    1.000        2.586        1.607
+[seul] delta + zigzag + bitshuffle                8    1.000        2.347        1.494
+shuffle + lz4                                     1    1.329        0.575        1.111
+shuffle + lz4                                     2    1.329        1.047        1.796
+shuffle + lz4                                     4    1.329        1.719        2.199
+shuffle + lz4                                     8    1.329        2.151        2.216
+shuffle + zstd-1                                  1    2.251        0.229        0.456
+shuffle + zstd-1                                  2    2.251        0.432        0.867
+shuffle + zstd-1                                  4    2.251        0.842        1.571
+shuffle + zstd-1                                  8    2.251        0.892        1.546
+bitshuffle + lz4                                  1    0.996        1.432        1.757
+bitshuffle + lz4                                  2    0.996        2.603        2.883
+bitshuffle + lz4                                  4    0.996        2.197        2.536
+bitshuffle + lz4                                  8    0.996        1.946        2.162
+bitshuffle + zstd-1                               1    2.630        1.070        1.658
+bitshuffle + zstd-1                               2    2.630        1.896        2.857
+bitshuffle + zstd-1                               4    2.630        2.419        3.509
+bitshuffle + zstd-1                               8    2.630        2.459        2.555
+zigzag + bitshuffle + lz4                         1    2.573        1.051        1.135
+zigzag + bitshuffle + lz4                         2    2.573        1.708        1.706
+zigzag + bitshuffle + lz4                         4    2.573        1.888        1.642
+zigzag + bitshuffle + lz4                         8    2.573        1.552        1.440
+zigzag + bitshuffle + zstd-1                      1    2.804        0.543        0.926
+zigzag + bitshuffle + zstd-1                      2    2.804        0.998        1.478
+zigzag + bitshuffle + zstd-1                      4    2.804        1.412        1.654
+zigzag + bitshuffle + zstd-1                      8    2.804        1.422        1.596
+delta + zigzag + bitshuffle + lz4                 1    2.410        0.938        1.166
+delta + zigzag + bitshuffle + lz4                 2    2.410        1.774        1.707
+delta + zigzag + bitshuffle + lz4                 4    2.410        2.698        1.558
+delta + zigzag + bitshuffle + lz4                 8    2.410        2.533        1.467
+delta + zigzag + bitshuffle scalaire + zstd-1     1    2.583        0.133        0.259
+delta + zigzag + bitshuffle scalaire + zstd-1     2    2.583        0.265        0.504
+delta + zigzag + bitshuffle scalaire + zstd-1     4    2.583        0.464        0.748
+delta + zigzag + bitshuffle scalaire + zstd-1     8    2.583        0.678        1.019
+delta + zigzag + bitshuffle + zstd-1              1    2.583        0.545        0.969
+delta + zigzag + bitshuffle + zstd-1              2    2.583        1.065        1.645
+delta + zigzag + bitshuffle + zstd-1              4    2.583        1.717        1.571
+delta + zigzag + bitshuffle + zstd-1              8    2.583        1.848        1.501
+delta + zigzag + bitshuffle + zstd--1             1    2.472        0.674        1.155
+delta + zigzag + bitshuffle + zstd--1             2    2.472        1.305        1.853
+delta + zigzag + bitshuffle + zstd--1             4    2.472        1.982        1.763
+delta + zigzag + bitshuffle + zstd--1             8    2.472        2.144        1.629
+blosc2 shuffle + lz4                              1    1.250        0.449        0.848
+blosc2 shuffle + lz4                              2    1.250        0.870        1.602
+blosc2 shuffle + lz4                              4    1.250        1.705        2.828
+blosc2 shuffle + lz4                              8    1.250        2.699        3.440
+blosc2 bitshuffle + lz4                           1    2.368        0.710        1.205
+blosc2 bitshuffle + lz4                           2    2.368        1.358        2.360
+blosc2 bitshuffle + lz4                           4    2.368        2.615        3.940
+blosc2 bitshuffle + lz4                           8    2.368        3.249        4.201
+blosc2 bitshuffle + zstd-1                        1    2.431        0.520        1.194
+blosc2 bitshuffle + zstd-1                        2    2.431        1.019        2.329
+blosc2 bitshuffle + zstd-1                        4    2.431        1.929        4.014
+blosc2 bitshuffle + zstd-1                        8    2.431        2.361        4.461
+data/noise_s64.bin : 256 Mio, blocs de 1024 Kio, 256 blocs
+chaîne                                         thr     taux   comp. Go/s décomp. Go/s
+copie (memcpy)                                    1    1.000        4.852        4.172
+copie (memcpy)                                    2    1.000        4.822        4.903
+copie (memcpy)                                    4    1.000        5.670        4.717
+copie (memcpy)                                    8    1.000        5.521        4.358
+zlib-1                                            1    1.547        0.026        0.110
+zlib-1                                            2    1.547        0.052        0.216
+zlib-1                                            4    1.547        0.100        0.344
+zlib-1                                            8    1.547        0.122        0.509
+lz4                                               1    1.000        0.701        3.550
+lz4                                               2    1.000        1.337        4.137
+lz4                                               4    1.000        2.063        3.886
+lz4                                               8    1.000        2.368        3.897
+zstd-1                                            1    1.533        0.368        0.979
+zstd-1                                            2    1.533        0.734        1.885
+zstd-1                                            4    1.533        1.337        3.086
+zstd-1                                            8    1.533        1.377        2.727
+zstd-3                                            1    1.631        0.047        0.341
+zstd-3                                            2    1.631        0.084        0.629
+zstd-3                                            4    1.631        0.085        1.216
+zstd-3                                            8    1.631        0.056        1.116
+[seul] bitshuffle scalaire                        1    1.000        0.153        0.277
+[seul] bitshuffle scalaire                        2    1.000        0.314        0.567
+[seul] bitshuffle scalaire                        4    1.000        0.619        1.089
+[seul] bitshuffle scalaire                        8    1.000        1.067        1.269
+[seul] bitshuffle AVX2                            1    1.000        1.571        1.696
+[seul] bitshuffle AVX2                            2    1.000        2.063        2.571
+[seul] bitshuffle AVX2                            4    1.000        2.399        2.424
+[seul] bitshuffle AVX2                            8    1.000        2.344        2.458
+[seul] delta + zigzag + bitshuffle                1    1.000        1.699        1.279
+[seul] delta + zigzag + bitshuffle                2    1.000        2.979        2.001
+[seul] delta + zigzag + bitshuffle                4    1.000        2.848        1.750
+[seul] delta + zigzag + bitshuffle                8    1.000        2.456        1.639
+shuffle + lz4                                     1    1.329        0.632        1.286
+shuffle + lz4                                     2    1.329        1.207        2.371
+shuffle + lz4                                     4    1.329        2.016        2.829
+shuffle + lz4                                     8    1.329        2.491        2.582
+shuffle + zstd-1                                  1    1.763        0.238        0.449
+shuffle + zstd-1                                  2    1.763        0.479        0.867
+shuffle + zstd-1                                  4    1.763        0.912        1.612
+shuffle + zstd-1                                  8    1.763        0.949        1.711
+bitshuffle + lz4                                  1    0.996        1.732        1.906
+bitshuffle + lz4                                  2    0.996        3.118        3.301
+bitshuffle + lz4                                  4    0.996        3.073        3.589
+bitshuffle + lz4                                  8    0.996        2.401        2.667
+bitshuffle + zstd-1                               1    1.977        1.202        1.855
+bitshuffle + zstd-1                               2    1.977        2.189        3.201
+bitshuffle + zstd-1                               4    1.977        3.114        4.122
+bitshuffle + zstd-1                               8    1.977        2.691        2.876
+zigzag + bitshuffle + lz4                         1    1.947        1.192        1.337
+zigzag + bitshuffle + lz4                         2    1.947        2.144        2.028
+zigzag + bitshuffle + lz4                         4    1.947        2.296        1.912
+zigzag + bitshuffle + lz4                         8    1.947        1.817        1.722
+zigzag + bitshuffle + zstd-1                      1    2.077        0.654        1.130
+zigzag + bitshuffle + zstd-1                      2    2.077        1.129        1.808
+zigzag + bitshuffle + zstd-1                      4    2.077        1.627        1.851
+zigzag + bitshuffle + zstd-1                      8    2.077        1.585        1.736
+delta + zigzag + bitshuffle + lz4                 1    1.852        1.047        1.384
+delta + zigzag + bitshuffle + lz4                 2    1.852        1.924        2.174
+delta + zigzag + bitshuffle + lz4                 4    1.852        3.332        2.030
+delta + zigzag + bitshuffle + lz4                 8    1.852        2.955        1.717
+delta + zigzag + bitshuffle scalaire + zstd-1     1    1.953        0.149        0.294
+delta + zigzag + bitshuffle scalaire + zstd-1     2    1.953        0.266        0.522
+delta + zigzag + bitshuffle scalaire + zstd-1     4    1.953        0.525        0.990
+delta + zigzag + bitshuffle scalaire + zstd-1     8    1.953        0.852        1.145
+delta + zigzag + bitshuffle + zstd-1              1    1.953        0.643        1.152
+delta + zigzag + bitshuffle + zstd-1              2    1.953        1.133        1.937
+delta + zigzag + bitshuffle + zstd-1              4    1.953        2.009        2.006
+delta + zigzag + bitshuffle + zstd-1              8    1.953        2.074        1.734
+delta + zigzag + bitshuffle + zstd--1             1    1.889        0.790        1.358
+delta + zigzag + bitshuffle + zstd--1             2    1.889        1.425        2.176
+delta + zigzag + bitshuffle + zstd--1             4    1.889        2.314        2.056
+delta + zigzag + bitshuffle + zstd--1             8    1.889        2.325        1.805
+blosc2 shuffle + lz4                              1    1.250        0.531        0.962
+blosc2 shuffle + lz4                              2    1.250        0.948        1.724
+blosc2 shuffle + lz4                              4    1.250        1.862        3.112
+blosc2 shuffle + lz4                              8    1.250        3.228        3.869
+blosc2 bitshuffle + lz4                           1    1.811        0.756        1.385
+blosc2 bitshuffle + lz4                           2    1.811        1.310        2.443
+blosc2 bitshuffle + lz4                           4    1.811        2.330        3.947
+blosc2 bitshuffle + lz4                           8    1.811        2.838        3.856
+blosc2 bitshuffle + zstd-1                        1    1.701        0.522        1.366
+blosc2 bitshuffle + zstd-1                        2    1.701        1.037        2.409
+blosc2 bitshuffle + zstd-1                        4    1.701        2.006        4.343
+blosc2 bitshuffle + zstd-1                        8    1.701        2.438        4.849
+data/scene_s16.bin : 256 Mio, blocs de 1024 Kio, 256 blocs
+chaîne                                         thr     taux   comp. Go/s décomp. Go/s
+copie (memcpy)                                    1    1.000        5.515        5.005
+copie (memcpy)                                    2    1.000        6.180        5.483
+copie (memcpy)                                    4    1.000        6.190        5.534
+copie (memcpy)                                    8    1.000        5.720        5.208
+zlib-1                                            1    1.271        0.025        0.125
+zlib-1                                            2    1.271        0.045        0.218
+zlib-1                                            4    1.271        0.085        0.412
+zlib-1                                            8    1.271        0.113        0.560
+lz4                                               1    0.996        2.565        4.766
+lz4                                               2    0.996        4.217        5.120
+lz4                                               4    0.996        4.819        5.042
+lz4                                               8    0.996        4.537        4.620
+zstd-1                                            1    1.292        0.355        0.745
+zstd-1                                            2    1.292        0.698        1.432
+zstd-1                                            4    1.292        1.329        2.566
+zstd-1                                            8    1.292        1.467        2.871
+zstd-3                                            1    1.318        0.078        0.421
+zstd-3                                            2    1.318        0.154        0.830
+zstd-3                                            4    1.318        0.255        1.596
+zstd-3                                            8    1.318        0.114        1.807
+[seul] bitshuffle scalaire                        1    1.000        0.191        0.353
+[seul] bitshuffle scalaire                        2    1.000        0.342        0.619
+[seul] bitshuffle scalaire                        4    1.000        0.666        1.188
+[seul] bitshuffle scalaire                        8    1.000        1.163        1.376
+[seul] bitshuffle AVX2                            1    1.000        1.780        1.810
+[seul] bitshuffle AVX2                            2    1.000        2.974        3.138
+[seul] bitshuffle AVX2                            4    1.000        3.053        3.555
+[seul] bitshuffle AVX2                            8    1.000        2.650        2.744
+[seul] delta + zigzag + bitshuffle                1    1.000        1.790        1.572
+[seul] delta + zigzag + bitshuffle                2    1.000        3.286        2.354
+[seul] delta + zigzag + bitshuffle                4    1.000        3.083        1.961
+[seul] delta + zigzag + bitshuffle                8    1.000        2.668        1.750
+shuffle + lz4                                     1    1.423        0.564        1.567
+shuffle + lz4                                     2    1.423        1.005        2.679
+shuffle + lz4                                     4    1.423        1.751        3.057
+shuffle + lz4                                     8    1.423        2.144        2.703
+shuffle + zstd-1                                  1    1.764        0.399        0.886
+shuffle + zstd-1                                  2    1.764        0.704        1.591
+shuffle + zstd-1                                  4    1.764        1.299        2.405
+shuffle + zstd-1                                  8    1.764        1.457        2.466
+bitshuffle + lz4                                  1    1.245        0.423        1.360
+bitshuffle + lz4                                  2    1.245        0.746        2.388
+bitshuffle + lz4                                  4    1.245        1.433        3.161
+bitshuffle + lz4                                  8    1.245        1.754        2.657
+bitshuffle + zstd-1                               1    1.737        0.541        1.245
+bitshuffle + zstd-1                               2    1.737        0.960        2.197
+bitshuffle + zstd-1                               4    1.737        1.722        3.267
+bitshuffle + zstd-1                               8    1.737        1.768        2.722
+zigzag + bitshuffle + lz4                         1    1.808        0.668        1.361
+zigzag + bitshuffle + lz4                         2    1.808        1.168        2.165
+zigzag + bitshuffle + lz4                         4    1.808        1.758        1.937
+zigzag + bitshuffle + lz4                         8    1.808        1.786        1.728
+zigzag + bitshuffle + zstd-1                      1    1.915        0.405        0.926
+zigzag + bitshuffle + zstd-1                      2    1.915        0.699        1.536
+zigzag + bitshuffle + zstd-1                      4    1.915        1.217        1.752
+zigzag + bitshuffle + zstd-1                      8    1.915        1.271        1.718
+delta + zigzag + bitshuffle + lz4                 1    2.273        0.980        1.481
+delta + zigzag + bitshuffle + lz4                 2    2.273        1.770        2.430
+delta + zigzag + bitshuffle + lz4                 4    2.273        3.199        2.133
+delta + zigzag + bitshuffle + lz4                 8    2.273        3.121        1.750
+delta + zigzag + bitshuffle scalaire + zstd-1     1    2.428        0.155        0.305
+delta + zigzag + bitshuffle scalaire + zstd-1     2    2.428        0.270        0.520
+delta + zigzag + bitshuffle scalaire + zstd-1     4    2.428        0.521        0.972
+delta + zigzag + bitshuffle scalaire + zstd-1     8    2.428        0.845        1.131
+delta + zigzag + bitshuffle + zstd-1              1    2.428        0.588        1.041
+delta + zigzag + bitshuffle + zstd-1              2    2.428        1.036        1.779
+delta + zigzag + bitshuffle + zstd-1              4    2.428        1.916        1.942
+delta + zigzag + bitshuffle + zstd-1              8    2.428        1.890        1.705
+delta + zigzag + bitshuffle + zstd--1             1    2.323        0.755        1.278
+delta + zigzag + bitshuffle + zstd--1             2    2.323        1.342        2.150
+delta + zigzag + bitshuffle + zstd--1             4    2.323        2.326        2.042
+delta + zigzag + bitshuffle + zstd--1             8    2.323        2.303        1.750
+blosc2 shuffle + lz4                              1    1.319        0.508        1.240
+blosc2 shuffle + lz4                              2    1.319        0.916        2.172
+blosc2 shuffle + lz4                              4    1.319        1.810        3.619
+blosc2 shuffle + lz4                              8    1.319        2.946        4.575
+blosc2 bitshuffle + lz4                           1    1.580        0.515        1.290
+blosc2 bitshuffle + lz4                           2    1.580        0.926        2.261
+blosc2 bitshuffle + lz4                           4    1.580        1.891        3.948
+blosc2 bitshuffle + lz4                           8    1.580        2.573        4.160
+blosc2 bitshuffle + zstd-1                        1    1.138        0.537        1.332
+blosc2 bitshuffle + zstd-1                        2    1.138        0.956        2.403
+blosc2 bitshuffle + zstd-1                        4    1.138        1.836        4.037
+blosc2 bitshuffle + zstd-1                        8    1.138        2.224        4.280
+data/scene_s16.bin : 256 Mio, blocs de 64 Kio, 4096 blocs
+chaîne                                         thr     taux   comp. Go/s décomp. Go/s
+copie (memcpy)                                    4    1.000        6.303        5.642
+zlib-1                                            4    1.271        0.090        0.420
+lz4                                               4    1.012        2.229        4.815
+zstd-1                                            4    1.291        1.536        2.706
+zstd-3                                            4    1.291        1.342        2.671
+[seul] bitshuffle scalaire                        4    1.000        0.581        1.398
+[seul] bitshuffle AVX2                            4    1.000        5.909        4.874
+[seul] delta + zigzag + bitshuffle                4    1.000        5.787        4.270
+shuffle + lz4                                     4    1.246        1.976        3.618
+shuffle + zstd-1                                  4    1.547        0.986        1.819
+bitshuffle + lz4                                  4    1.566        3.390        5.108
+bitshuffle + zstd-1                               4    1.245        3.968        5.140
+zigzag + bitshuffle + lz4                         4    1.666        2.749        4.049
+zigzag + bitshuffle + zstd-1                      4    1.721        1.289        3.557
+delta + zigzag + bitshuffle + lz4                 4    2.016        3.453        4.184
+delta + zigzag + bitshuffle scalaire + zstd-1     4    2.087        0.446        1.014
+delta + zigzag + bitshuffle + zstd-1              4    2.087        1.629        2.518
+delta + zigzag + bitshuffle + zstd--1             4    2.037        2.849        3.791
+blosc2 shuffle + lz4                              4    1.277        1.778        3.656
+blosc2 bitshuffle + lz4                           4    1.565        2.137        4.140
+blosc2 bitshuffle + zstd-1                        4    1.137        1.625        3.734
+data/scene_s16.bin : 256 Mio, blocs de 256 Kio, 1024 blocs
+chaîne                                         thr     taux   comp. Go/s décomp. Go/s
+copie (memcpy)                                    4    1.000        5.718        5.286
+zlib-1                                            4    1.271        0.079        0.397
+lz4                                               4    0.996        5.105        5.296
+zstd-1                                            4    1.292        1.381        2.754
+zstd-3                                            4    1.303        0.381        1.855
+[seul] bitshuffle scalaire                        4    1.000        0.627        1.573
+[seul] bitshuffle AVX2                            4    1.000        5.777        4.847
+[seul] delta + zigzag + bitshuffle                4    1.000        5.669        4.191
+shuffle + lz4                                     4    1.392        1.948        4.320
+shuffle + zstd-1                                  4    1.733        1.295        2.680
+bitshuffle + lz4                                  4    1.622        2.531        4.736
+bitshuffle + zstd-1                               4    1.712        2.103        3.951
+zigzag + bitshuffle + lz4                         4    1.759        2.293        4.332
+zigzag + bitshuffle + zstd-1                      4    1.848        1.217        3.373
+delta + zigzag + bitshuffle + lz4                 4    2.213        3.248        4.392
+delta + zigzag + bitshuffle scalaire + zstd-1     4    2.296        0.481        1.151
+delta + zigzag + bitshuffle + zstd-1              4    2.296        1.715        2.593
+delta + zigzag + bitshuffle + zstd--1             4    2.251        2.819        3.935
+blosc2 shuffle + lz4                              4    1.318        1.816        3.664
+blosc2 bitshuffle + lz4                           4    1.579        1.932        3.916
+blosc2 bitshuffle + zstd-1                        4    1.137        1.808        4.060
+data/scene_s16.bin : 256 Mio, blocs de 1024 Kio, 256 blocs
+chaîne                                         thr     taux   comp. Go/s décomp. Go/s
+copie (memcpy)                                    4    1.000        6.201        5.610
+zlib-1                                            4    1.271        0.086        0.402
+lz4                                               4    0.996        4.805        5.071
+zstd-1                                            4    1.292        1.383        2.743
+zstd-3                                            4    1.318        0.243        1.596
+[seul] bitshuffle scalaire                        4    1.000        0.664        1.190
+[seul] bitshuffle AVX2                            4    1.000        3.059        3.483
+[seul] delta + zigzag + bitshuffle                4    1.000        3.134        1.937
+shuffle + lz4                                     4    1.423        1.845        3.271
+shuffle + zstd-1                                  4    1.764        1.294        2.432
+bitshuffle + lz4                                  4    1.245        1.425        3.283
+bitshuffle + zstd-1                               4    1.737        1.711        3.159
+zigzag + bitshuffle + lz4                         4    1.808        1.782        1.939
+zigzag + bitshuffle + zstd-1                      4    1.915        1.165        1.753
+delta + zigzag + bitshuffle + lz4                 4    2.273        3.120        2.120
+delta + zigzag + bitshuffle scalaire + zstd-1     4    2.428        0.515        0.949
+delta + zigzag + bitshuffle + zstd-1              4    2.428        1.885        1.913
+delta + zigzag + bitshuffle + zstd--1             4    2.323        2.348        2.006
+blosc2 shuffle + lz4                              4    1.319        1.803        3.594
+blosc2 bitshuffle + lz4                           4    1.580        1.924        3.888
+blosc2 bitshuffle + zstd-1                        4    1.138        1.858        4.009
+data/scene_s16.bin : 256 Mio, blocs de 4096 Kio, 64 blocs
+chaîne                                         thr     taux   comp. Go/s décomp. Go/s
+copie (memcpy)                                    4    1.000        6.413        6.417
+zlib-1                                            4    1.271        0.086        0.414
+lz4                                               4    0.996        4.668        5.458
+zstd-1                                            4    1.292        1.330        2.717
+zstd-3                                            4    1.321        0.163        1.304
+[seul] bitshuffle scalaire                        4    1.000        0.623        1.107
+[seul] bitshuffle AVX2                            4    1.000        2.721        2.697
+[seul] delta + zigzag + bitshuffle                4    1.000        2.756        1.728
+shuffle + lz4                                     4    1.432        1.553        2.345
+shuffle + zstd-1                                  4    1.771        1.172        1.774
+bitshuffle + lz4                                  4    1.250        1.278        2.445
+bitshuffle + zstd-1                               4    1.642        1.275        2.222
+zigzag + bitshuffle + lz4                         4    1.825        1.500        1.641
+zigzag + bitshuffle + zstd-1                      4    1.942        1.088        1.511
+delta + zigzag + bitshuffle + lz4                 4    2.289        2.484        1.688
+delta + zigzag + bitshuffle scalaire + zstd-1     4    2.453        0.518        0.917
+delta + zigzag + bitshuffle + zstd-1              4    2.453        1.809        1.589
+delta + zigzag + bitshuffle + zstd--1             4    2.344        2.019        1.643
+blosc2 shuffle + lz4                              4    1.319        1.817        3.665
+blosc2 bitshuffle + lz4                           4    1.580        1.849        3.926
+blosc2 bitshuffle + zstd-1                        4    1.138        1.808        4.040

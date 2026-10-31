@@ -1,0 +1,12 @@
+date: 2026-10-31T13:14:05+01:00
+cpu: Intel(R) Core(TM) i5-10310U CPU @ 1.70GHz
+L1d cache: 128 KiB (4 instances)
+L2 cache: 1 MiB (4 instances)
+L3 cache: 6 MiB (1 instance)
+compilateur: cc (Ubuntu 15.2.0-16ubuntu1) 15.2.0
+options: -O3 -march=native
+liblz4-dev: 1.10.0-8
+libzstd-dev: 1.5.7+dfsg-3
+libblosc2-dev: 2.23.0+ds-1
+zlib1g-dev: 1:1.3.dfsg+really1.3.1-1ubuntu3.2
+commit: 755c755

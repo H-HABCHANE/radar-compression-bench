@@ -1,0 +1,337 @@
+dataset,pipeline,threads,block_kib,ratio,comp_GBs,decomp_GBs
+data/noise_s4.bin,copie (memcpy),1,1024,1.00000,5.3356,4.6211
+data/noise_s4.bin,copie (memcpy),2,1024,1.00000,5.8830,5.1032
+data/noise_s4.bin,copie (memcpy),4,1024,1.00000,5.7529,5.4168
+data/noise_s4.bin,copie (memcpy),8,1024,1.00000,5.6327,5.2322
+data/noise_s4.bin,zlib-1,1,1024,3.02339,0.0495,0.1652
+data/noise_s4.bin,zlib-1,2,1024,3.02339,0.0945,0.3256
+data/noise_s4.bin,zlib-1,4,1024,3.02339,0.1860,0.6479
+data/noise_s4.bin,zlib-1,8,1024,3.02339,0.2325,0.8187
+data/noise_s4.bin,lz4,1,1024,1.98026,0.2593,1.1391
+data/noise_s4.bin,lz4,2,1024,1.98026,0.5140,2.1618
+data/noise_s4.bin,lz4,4,1024,1.98026,1.0174,4.1041
+data/noise_s4.bin,lz4,8,1024,1.98026,1.5896,4.0573
+data/noise_s4.bin,zstd-1,1,1024,3.10291,0.1299,0.4682
+data/noise_s4.bin,zstd-1,2,1024,3.10291,0.2404,0.8593
+data/noise_s4.bin,zstd-1,4,1024,3.10291,0.4680,1.6913
+data/noise_s4.bin,zstd-1,8,1024,3.10291,0.5604,1.5594
+data/noise_s4.bin,zstd-3,1,1024,3.41144,0.1094,0.4576
+data/noise_s4.bin,zstd-3,2,1024,3.41144,0.1904,0.8144
+data/noise_s4.bin,zstd-3,4,1024,3.41144,0.3043,1.3617
+data/noise_s4.bin,zstd-3,8,1024,3.41144,0.2956,1.2319
+data/noise_s4.bin,[seul] bitshuffle scalaire,1,1024,1.00000,0.1873,0.3426
+data/noise_s4.bin,[seul] bitshuffle scalaire,2,1024,1.00000,0.3357,0.6140
+data/noise_s4.bin,[seul] bitshuffle scalaire,4,1024,1.00000,0.6670,1.2005
+data/noise_s4.bin,[seul] bitshuffle scalaire,8,1024,1.00000,1.1623,1.3639
+data/noise_s4.bin,[seul] bitshuffle AVX2,1,1024,1.00000,1.8742,1.9074
+data/noise_s4.bin,[seul] bitshuffle AVX2,2,1024,1.00000,3.4814,3.2333
+data/noise_s4.bin,[seul] bitshuffle AVX2,4,1024,1.00000,3.0203,3.6161
+data/noise_s4.bin,[seul] bitshuffle AVX2,8,1024,1.00000,2.6638,2.7770
+data/noise_s4.bin,[seul] delta + zigzag + bitshuffle,1,1024,1.00000,1.7774,1.5650
+data/noise_s4.bin,[seul] delta + zigzag + bitshuffle,2,1024,1.00000,3.3579,2.4774
+data/noise_s4.bin,[seul] delta + zigzag + bitshuffle,4,1024,1.00000,3.1216,2.0234
+data/noise_s4.bin,[seul] delta + zigzag + bitshuffle,8,1024,1.00000,2.6514,1.7512
+data/noise_s4.bin,shuffle + lz4,1,1024,1.37553,0.3467,1.0825
+data/noise_s4.bin,shuffle + lz4,2,1024,1.37553,0.6208,1.8573
+data/noise_s4.bin,shuffle + lz4,4,1024,1.37553,1.1884,2.6477
+data/noise_s4.bin,shuffle + lz4,8,1024,1.37553,1.5097,2.5298
+data/noise_s4.bin,shuffle + zstd-1,1,1024,3.13428,0.2733,0.5737
+data/noise_s4.bin,shuffle + zstd-1,2,1024,3.13428,0.4790,0.9947
+data/noise_s4.bin,shuffle + zstd-1,4,1024,3.13428,0.9216,1.8058
+data/noise_s4.bin,shuffle + zstd-1,8,1024,3.13428,0.9675,1.7884
+data/noise_s4.bin,bitshuffle + lz4,1,1024,0.99609,1.7039,1.9213
+data/noise_s4.bin,bitshuffle + lz4,2,1024,0.99609,3.1347,3.2589
+data/noise_s4.bin,bitshuffle + lz4,4,1024,0.99609,3.0795,3.6429
+data/noise_s4.bin,bitshuffle + lz4,8,1024,0.99609,2.4015,2.7019
+data/noise_s4.bin,bitshuffle + zstd-1,1,1024,3.90486,1.0095,1.9358
+data/noise_s4.bin,bitshuffle + zstd-1,2,1024,3.90486,1.8370,3.4028
+data/noise_s4.bin,bitshuffle + zstd-1,4,1024,3.90486,3.0360,4.5602
+data/noise_s4.bin,bitshuffle + zstd-1,8,1024,3.90486,2.7869,3.0538
+data/noise_s4.bin,zigzag + bitshuffle + lz4,1,1024,3.77840,1.2145,1.3355
+data/noise_s4.bin,zigzag + bitshuffle + lz4,2,1024,3.77840,2.1737,2.1329
+data/noise_s4.bin,zigzag + bitshuffle + lz4,4,1024,3.77840,2.6062,2.0194
+data/noise_s4.bin,zigzag + bitshuffle + lz4,8,1024,3.77840,1.9968,1.8198
+data/noise_s4.bin,zigzag + bitshuffle + zstd-1,1,1024,4.29466,0.6667,1.2203
+data/noise_s4.bin,zigzag + bitshuffle + zstd-1,2,1024,4.29466,1.1721,1.8911
+data/noise_s4.bin,zigzag + bitshuffle + zstd-1,4,1024,4.29466,1.7761,2.0582
+data/noise_s4.bin,zigzag + bitshuffle + zstd-1,8,1024,4.29466,1.7092,1.8451
+data/noise_s4.bin,delta + zigzag + bitshuffle + lz4,1,1024,3.43978,1.0299,1.3591
+data/noise_s4.bin,delta + zigzag + bitshuffle + lz4,2,1024,3.43978,1.9165,2.2562
+data/noise_s4.bin,delta + zigzag + bitshuffle + lz4,4,1024,3.43978,3.4939,2.1801
+data/noise_s4.bin,delta + zigzag + bitshuffle + lz4,8,1024,3.43978,3.4410,1.8117
+data/noise_s4.bin,delta + zigzag + bitshuffle scalaire + zstd-1,1,1024,3.80282,0.1558,0.3110
+data/noise_s4.bin,delta + zigzag + bitshuffle scalaire + zstd-1,2,1024,3.80282,0.2695,0.5421
+data/noise_s4.bin,delta + zigzag + bitshuffle scalaire + zstd-1,4,1024,3.80282,0.5226,1.0212
+data/noise_s4.bin,delta + zigzag + bitshuffle scalaire + zstd-1,8,1024,3.80282,0.8422,1.1721
+data/noise_s4.bin,delta + zigzag + bitshuffle + zstd-1,1,1024,3.80282,0.5817,1.2306
+data/noise_s4.bin,delta + zigzag + bitshuffle + zstd-1,2,1024,3.80282,0.9636,1.6142
+data/noise_s4.bin,delta + zigzag + bitshuffle + zstd-1,4,1024,3.80282,1.7056,2.0216
+data/noise_s4.bin,delta + zigzag + bitshuffle + zstd-1,8,1024,3.80282,1.8065,1.7384
+data/noise_s4.bin,delta + zigzag + bitshuffle + zstd--1,1,1024,3.56328,0.7599,1.3654
+data/noise_s4.bin,delta + zigzag + bitshuffle + zstd--1,2,1024,3.56328,1.4389,2.1628
+data/noise_s4.bin,delta + zigzag + bitshuffle + zstd--1,4,1024,3.56328,2.3896,2.2379
+data/noise_s4.bin,delta + zigzag + bitshuffle + zstd--1,8,1024,3.56328,2.5006,1.8560
+data/noise_s4.bin,blosc2 shuffle + lz4,1,1024,1.41345,0.2150,0.7372
+data/noise_s4.bin,blosc2 shuffle + lz4,2,1024,1.41345,0.3783,1.3124
+data/noise_s4.bin,blosc2 shuffle + lz4,4,1024,1.41345,0.7545,2.4387
+data/noise_s4.bin,blosc2 shuffle + lz4,8,1024,1.41345,1.2026,2.8708
+data/noise_s4.bin,blosc2 bitshuffle + lz4,1,1024,3.40143,0.8412,1.4226
+data/noise_s4.bin,blosc2 bitshuffle + lz4,2,1024,3.40143,1.4541,2.4650
+data/noise_s4.bin,blosc2 bitshuffle + lz4,4,1024,3.40143,2.7990,4.4276
+data/noise_s4.bin,blosc2 bitshuffle + lz4,8,1024,3.40143,3.5907,4.6595
+data/noise_s4.bin,blosc2 bitshuffle + zstd-1,1,1024,3.60554,0.6012,1.4727
+data/noise_s4.bin,blosc2 bitshuffle + zstd-1,2,1024,3.60554,1.1180,2.5343
+data/noise_s4.bin,blosc2 bitshuffle + zstd-1,4,1024,3.60554,2.1762,4.6669
+data/noise_s4.bin,blosc2 bitshuffle + zstd-1,8,1024,3.60554,2.7215,5.1339
+data/noise_s16.bin,copie (memcpy),1,1024,1.00000,5.4039,4.9406
+data/noise_s16.bin,copie (memcpy),2,1024,1.00000,6.1879,5.5505
+data/noise_s16.bin,copie (memcpy),4,1024,1.00000,6.2651,5.6350
+data/noise_s16.bin,copie (memcpy),8,1024,1.00000,5.7602,5.2854
+data/noise_s16.bin,zlib-1,1,1024,2.15913,0.0440,0.1859
+data/noise_s16.bin,zlib-1,2,1024,2.15913,0.0845,0.3561
+data/noise_s16.bin,zlib-1,4,1024,2.15913,0.1586,0.6534
+data/noise_s16.bin,zlib-1,8,1024,2.15913,0.1742,0.6957
+data/noise_s16.bin,lz4,1,1024,1.28416,0.1763,1.2255
+data/noise_s16.bin,lz4,2,1024,1.28416,0.3613,2.4166
+data/noise_s16.bin,lz4,4,1024,1.28416,0.7349,4.4712
+data/noise_s16.bin,lz4,8,1024,1.28416,0.9499,4.5193
+data/noise_s16.bin,zstd-1,1,1024,1.97806,0.1363,0.6305
+data/noise_s16.bin,zstd-1,2,1024,1.97806,0.2648,1.2230
+data/noise_s16.bin,zstd-1,4,1024,1.97806,0.4973,2.2624
+data/noise_s16.bin,zstd-1,8,1024,1.97806,0.5357,2.5953
+data/noise_s16.bin,zstd-3,1,1024,2.12310,0.0527,0.2487
+data/noise_s16.bin,zstd-3,2,1024,2.12310,0.0970,0.5576
+data/noise_s16.bin,zstd-3,4,1024,2.12310,0.1497,1.0623
+data/noise_s16.bin,zstd-3,8,1024,2.12310,0.0692,0.8386
+data/noise_s16.bin,[seul] bitshuffle scalaire,1,1024,1.00000,0.1663,0.2923
+data/noise_s16.bin,[seul] bitshuffle scalaire,2,1024,1.00000,0.3273,0.5911
+data/noise_s16.bin,[seul] bitshuffle scalaire,4,1024,1.00000,0.6414,1.0905
+data/noise_s16.bin,[seul] bitshuffle scalaire,8,1024,1.00000,1.0295,1.2218
+data/noise_s16.bin,[seul] bitshuffle AVX2,1,1024,1.00000,1.6883,1.7026
+data/noise_s16.bin,[seul] bitshuffle AVX2,2,1024,1.00000,2.6603,2.7622
+data/noise_s16.bin,[seul] bitshuffle AVX2,4,1024,1.00000,2.3315,2.6540
+data/noise_s16.bin,[seul] bitshuffle AVX2,8,1024,1.00000,2.3395,2.4222
+data/noise_s16.bin,[seul] delta + zigzag + bitshuffle,1,1024,1.00000,1.6666,1.3621
+data/noise_s16.bin,[seul] delta + zigzag + bitshuffle,2,1024,1.00000,2.7540,1.8208
+data/noise_s16.bin,[seul] delta + zigzag + bitshuffle,4,1024,1.00000,2.5860,1.6072
+data/noise_s16.bin,[seul] delta + zigzag + bitshuffle,8,1024,1.00000,2.3469,1.4942
+data/noise_s16.bin,shuffle + lz4,1,1024,1.32924,0.5754,1.1115
+data/noise_s16.bin,shuffle + lz4,2,1024,1.32924,1.0469,1.7958
+data/noise_s16.bin,shuffle + lz4,4,1024,1.32924,1.7193,2.1993
+data/noise_s16.bin,shuffle + lz4,8,1024,1.32924,2.1506,2.2157
+data/noise_s16.bin,shuffle + zstd-1,1,1024,2.25053,0.2295,0.4563
+data/noise_s16.bin,shuffle + zstd-1,2,1024,2.25053,0.4318,0.8668
+data/noise_s16.bin,shuffle + zstd-1,4,1024,2.25053,0.8416,1.5713
+data/noise_s16.bin,shuffle + zstd-1,8,1024,2.25053,0.8924,1.5459
+data/noise_s16.bin,bitshuffle + lz4,1,1024,0.99609,1.4315,1.7566
+data/noise_s16.bin,bitshuffle + lz4,2,1024,0.99609,2.6033,2.8832
+data/noise_s16.bin,bitshuffle + lz4,4,1024,0.99609,2.1965,2.5361
+data/noise_s16.bin,bitshuffle + lz4,8,1024,0.99609,1.9463,2.1616
+data/noise_s16.bin,bitshuffle + zstd-1,1,1024,2.62985,1.0695,1.6580
+data/noise_s16.bin,bitshuffle + zstd-1,2,1024,2.62985,1.8958,2.8566
+data/noise_s16.bin,bitshuffle + zstd-1,4,1024,2.62985,2.4191,3.5085
+data/noise_s16.bin,bitshuffle + zstd-1,8,1024,2.62985,2.4594,2.5547
+data/noise_s16.bin,zigzag + bitshuffle + lz4,1,1024,2.57260,1.0506,1.1353
+data/noise_s16.bin,zigzag + bitshuffle + lz4,2,1024,2.57260,1.7083,1.7064
+data/noise_s16.bin,zigzag + bitshuffle + lz4,4,1024,2.57260,1.8880,1.6419
+data/noise_s16.bin,zigzag + bitshuffle + lz4,8,1024,2.57260,1.5523,1.4401
+data/noise_s16.bin,zigzag + bitshuffle + zstd-1,1,1024,2.80449,0.5429,0.9265
+data/noise_s16.bin,zigzag + bitshuffle + zstd-1,2,1024,2.80449,0.9984,1.4778
+data/noise_s16.bin,zigzag + bitshuffle + zstd-1,4,1024,2.80449,1.4125,1.6536
+data/noise_s16.bin,zigzag + bitshuffle + zstd-1,8,1024,2.80449,1.4224,1.5963
+data/noise_s16.bin,delta + zigzag + bitshuffle + lz4,1,1024,2.40998,0.9377,1.1658
+data/noise_s16.bin,delta + zigzag + bitshuffle + lz4,2,1024,2.40998,1.7737,1.7066
+data/noise_s16.bin,delta + zigzag + bitshuffle + lz4,4,1024,2.40998,2.6983,1.5582
+data/noise_s16.bin,delta + zigzag + bitshuffle + lz4,8,1024,2.40998,2.5334,1.4673
+data/noise_s16.bin,delta + zigzag + bitshuffle scalaire + zstd-1,1,1024,2.58259,0.1329,0.2593
+data/noise_s16.bin,delta + zigzag + bitshuffle scalaire + zstd-1,2,1024,2.58259,0.2652,0.5038
+data/noise_s16.bin,delta + zigzag + bitshuffle scalaire + zstd-1,4,1024,2.58259,0.4643,0.7481
+data/noise_s16.bin,delta + zigzag + bitshuffle scalaire + zstd-1,8,1024,2.58259,0.6780,1.0191
+data/noise_s16.bin,delta + zigzag + bitshuffle + zstd-1,1,1024,2.58259,0.5447,0.9686
+data/noise_s16.bin,delta + zigzag + bitshuffle + zstd-1,2,1024,2.58259,1.0653,1.6447
+data/noise_s16.bin,delta + zigzag + bitshuffle + zstd-1,4,1024,2.58259,1.7168,1.5713
+data/noise_s16.bin,delta + zigzag + bitshuffle + zstd-1,8,1024,2.58259,1.8480,1.5013
+data/noise_s16.bin,delta + zigzag + bitshuffle + zstd--1,1,1024,2.47197,0.6741,1.1551
+data/noise_s16.bin,delta + zigzag + bitshuffle + zstd--1,2,1024,2.47197,1.3046,1.8527
+data/noise_s16.bin,delta + zigzag + bitshuffle + zstd--1,4,1024,2.47197,1.9821,1.7625
+data/noise_s16.bin,delta + zigzag + bitshuffle + zstd--1,8,1024,2.47197,2.1444,1.6289
+data/noise_s16.bin,blosc2 shuffle + lz4,1,1024,1.24995,0.4489,0.8485
+data/noise_s16.bin,blosc2 shuffle + lz4,2,1024,1.24995,0.8697,1.6016
+data/noise_s16.bin,blosc2 shuffle + lz4,4,1024,1.24995,1.7048,2.8284
+data/noise_s16.bin,blosc2 shuffle + lz4,8,1024,1.24995,2.6992,3.4404
+data/noise_s16.bin,blosc2 bitshuffle + lz4,1,1024,2.36821,0.7103,1.2051
+data/noise_s16.bin,blosc2 bitshuffle + lz4,2,1024,2.36821,1.3576,2.3595
+data/noise_s16.bin,blosc2 bitshuffle + lz4,4,1024,2.36821,2.6152,3.9398
+data/noise_s16.bin,blosc2 bitshuffle + lz4,8,1024,2.36821,3.2490,4.2009
+data/noise_s16.bin,blosc2 bitshuffle + zstd-1,1,1024,2.43132,0.5200,1.1937
+data/noise_s16.bin,blosc2 bitshuffle + zstd-1,2,1024,2.43132,1.0190,2.3293
+data/noise_s16.bin,blosc2 bitshuffle + zstd-1,4,1024,2.43132,1.9289,4.0136
+data/noise_s16.bin,blosc2 bitshuffle + zstd-1,8,1024,2.43132,2.3614,4.4611
+data/noise_s64.bin,copie (memcpy),1,1024,1.00000,4.8521,4.1717
+data/noise_s64.bin,copie (memcpy),2,1024,1.00000,4.8217,4.9029
+data/noise_s64.bin,copie (memcpy),4,1024,1.00000,5.6704,4.7173
+data/noise_s64.bin,copie (memcpy),8,1024,1.00000,5.5210,4.3583
+data/noise_s64.bin,zlib-1,1,1024,1.54724,0.0262,0.1099
+data/noise_s64.bin,zlib-1,2,1024,1.54724,0.0518,0.2163
+data/noise_s64.bin,zlib-1,4,1024,1.54724,0.1005,0.3435
+data/noise_s64.bin,zlib-1,8,1024,1.54724,0.1221,0.5086
+data/noise_s64.bin,lz4,1,1024,1.00024,0.7007,3.5496
+data/noise_s64.bin,lz4,2,1024,1.00024,1.3372,4.1365
+data/noise_s64.bin,lz4,4,1024,1.00024,2.0635,3.8858
+data/noise_s64.bin,lz4,8,1024,1.00024,2.3677,3.8972
+data/noise_s64.bin,zstd-1,1,1024,1.53305,0.3677,0.9785
+data/noise_s64.bin,zstd-1,2,1024,1.53305,0.7341,1.8850
+data/noise_s64.bin,zstd-1,4,1024,1.53305,1.3368,3.0863
+data/noise_s64.bin,zstd-1,8,1024,1.53305,1.3773,2.7270
+data/noise_s64.bin,zstd-3,1,1024,1.63062,0.0467,0.3410
+data/noise_s64.bin,zstd-3,2,1024,1.63062,0.0837,0.6291
+data/noise_s64.bin,zstd-3,4,1024,1.63062,0.0850,1.2156
+data/noise_s64.bin,zstd-3,8,1024,1.63062,0.0560,1.1161
+data/noise_s64.bin,[seul] bitshuffle scalaire,1,1024,1.00000,0.1526,0.2768
+data/noise_s64.bin,[seul] bitshuffle scalaire,2,1024,1.00000,0.3135,0.5672
+data/noise_s64.bin,[seul] bitshuffle scalaire,4,1024,1.00000,0.6186,1.0885
+data/noise_s64.bin,[seul] bitshuffle scalaire,8,1024,1.00000,1.0673,1.2690
+data/noise_s64.bin,[seul] bitshuffle AVX2,1,1024,1.00000,1.5712,1.6963
+data/noise_s64.bin,[seul] bitshuffle AVX2,2,1024,1.00000,2.0628,2.5705
+data/noise_s64.bin,[seul] bitshuffle AVX2,4,1024,1.00000,2.3991,2.4240
+data/noise_s64.bin,[seul] bitshuffle AVX2,8,1024,1.00000,2.3444,2.4580
+data/noise_s64.bin,[seul] delta + zigzag + bitshuffle,1,1024,1.00000,1.6990,1.2786
+data/noise_s64.bin,[seul] delta + zigzag + bitshuffle,2,1024,1.00000,2.9793,2.0014
+data/noise_s64.bin,[seul] delta + zigzag + bitshuffle,4,1024,1.00000,2.8481,1.7505
+data/noise_s64.bin,[seul] delta + zigzag + bitshuffle,8,1024,1.00000,2.4559,1.6386
+data/noise_s64.bin,shuffle + lz4,1,1024,1.32910,0.6315,1.2862
+data/noise_s64.bin,shuffle + lz4,2,1024,1.32910,1.2066,2.3706
+data/noise_s64.bin,shuffle + lz4,4,1024,1.32910,2.0159,2.8293
+data/noise_s64.bin,shuffle + lz4,8,1024,1.32910,2.4906,2.5817
+data/noise_s64.bin,shuffle + zstd-1,1,1024,1.76288,0.2385,0.4494
+data/noise_s64.bin,shuffle + zstd-1,2,1024,1.76288,0.4790,0.8666
+data/noise_s64.bin,shuffle + zstd-1,4,1024,1.76288,0.9125,1.6123
+data/noise_s64.bin,shuffle + zstd-1,8,1024,1.76288,0.9493,1.7106
+data/noise_s64.bin,bitshuffle + lz4,1,1024,0.99609,1.7319,1.9064
+data/noise_s64.bin,bitshuffle + lz4,2,1024,0.99609,3.1175,3.3014
+data/noise_s64.bin,bitshuffle + lz4,4,1024,0.99609,3.0730,3.5885
+data/noise_s64.bin,bitshuffle + lz4,8,1024,0.99609,2.4014,2.6673
+data/noise_s64.bin,bitshuffle + zstd-1,1,1024,1.97703,1.2020,1.8550
+data/noise_s64.bin,bitshuffle + zstd-1,2,1024,1.97703,2.1885,3.2007
+data/noise_s64.bin,bitshuffle + zstd-1,4,1024,1.97703,3.1140,4.1222
+data/noise_s64.bin,bitshuffle + zstd-1,8,1024,1.97703,2.6909,2.8757
+data/noise_s64.bin,zigzag + bitshuffle + lz4,1,1024,1.94674,1.1921,1.3370
+data/noise_s64.bin,zigzag + bitshuffle + lz4,2,1024,1.94674,2.1436,2.0279
+data/noise_s64.bin,zigzag + bitshuffle + lz4,4,1024,1.94674,2.2960,1.9117
+data/noise_s64.bin,zigzag + bitshuffle + lz4,8,1024,1.94674,1.8173,1.7224
+data/noise_s64.bin,zigzag + bitshuffle + zstd-1,1,1024,2.07697,0.6538,1.1295
+data/noise_s64.bin,zigzag + bitshuffle + zstd-1,2,1024,2.07697,1.1293,1.8082
+data/noise_s64.bin,zigzag + bitshuffle + zstd-1,4,1024,2.07697,1.6274,1.8509
+data/noise_s64.bin,zigzag + bitshuffle + zstd-1,8,1024,2.07697,1.5850,1.7358
+data/noise_s64.bin,delta + zigzag + bitshuffle + lz4,1,1024,1.85233,1.0466,1.3838
+data/noise_s64.bin,delta + zigzag + bitshuffle + lz4,2,1024,1.85233,1.9241,2.1738
+data/noise_s64.bin,delta + zigzag + bitshuffle + lz4,4,1024,1.85233,3.3319,2.0304
+data/noise_s64.bin,delta + zigzag + bitshuffle + lz4,8,1024,1.85233,2.9552,1.7165
+data/noise_s64.bin,delta + zigzag + bitshuffle scalaire + zstd-1,1,1024,1.95256,0.1488,0.2937
+data/noise_s64.bin,delta + zigzag + bitshuffle scalaire + zstd-1,2,1024,1.95256,0.2662,0.5224
+data/noise_s64.bin,delta + zigzag + bitshuffle scalaire + zstd-1,4,1024,1.95256,0.5250,0.9898
+data/noise_s64.bin,delta + zigzag + bitshuffle scalaire + zstd-1,8,1024,1.95256,0.8523,1.1454
+data/noise_s64.bin,delta + zigzag + bitshuffle + zstd-1,1,1024,1.95256,0.6428,1.1518
+data/noise_s64.bin,delta + zigzag + bitshuffle + zstd-1,2,1024,1.95256,1.1335,1.9372
+data/noise_s64.bin,delta + zigzag + bitshuffle + zstd-1,4,1024,1.95256,2.0091,2.0063
+data/noise_s64.bin,delta + zigzag + bitshuffle + zstd-1,8,1024,1.95256,2.0739,1.7344
+data/noise_s64.bin,delta + zigzag + bitshuffle + zstd--1,1,1024,1.88874,0.7898,1.3580
+data/noise_s64.bin,delta + zigzag + bitshuffle + zstd--1,2,1024,1.88874,1.4252,2.1761
+data/noise_s64.bin,delta + zigzag + bitshuffle + zstd--1,4,1024,1.88874,2.3144,2.0564
+data/noise_s64.bin,delta + zigzag + bitshuffle + zstd--1,8,1024,1.88874,2.3248,1.8052
+data/noise_s64.bin,blosc2 shuffle + lz4,1,1024,1.24969,0.5307,0.9617
+data/noise_s64.bin,blosc2 shuffle + lz4,2,1024,1.24969,0.9478,1.7244
+data/noise_s64.bin,blosc2 shuffle + lz4,4,1024,1.24969,1.8616,3.1116
+data/noise_s64.bin,blosc2 shuffle + lz4,8,1024,1.24969,3.2283,3.8689
+data/noise_s64.bin,blosc2 bitshuffle + lz4,1,1024,1.81107,0.7556,1.3848
+data/noise_s64.bin,blosc2 bitshuffle + lz4,2,1024,1.81107,1.3095,2.4427
+data/noise_s64.bin,blosc2 bitshuffle + lz4,4,1024,1.81107,2.3298,3.9465
+data/noise_s64.bin,blosc2 bitshuffle + lz4,8,1024,1.81107,2.8378,3.8565
+data/noise_s64.bin,blosc2 bitshuffle + zstd-1,1,1024,1.70056,0.5225,1.3662
+data/noise_s64.bin,blosc2 bitshuffle + zstd-1,2,1024,1.70056,1.0365,2.4093
+data/noise_s64.bin,blosc2 bitshuffle + zstd-1,4,1024,1.70056,2.0064,4.3433
+data/noise_s64.bin,blosc2 bitshuffle + zstd-1,8,1024,1.70056,2.4378,4.8491
+data/scene_s16.bin,copie (memcpy),1,1024,1.00000,5.5145,5.0048
+data/scene_s16.bin,copie (memcpy),2,1024,1.00000,6.1803,5.4834
+data/scene_s16.bin,copie (memcpy),4,1024,1.00000,6.1902,5.5343
+data/scene_s16.bin,copie (memcpy),8,1024,1.00000,5.7200,5.2081
+data/scene_s16.bin,zlib-1,1,1024,1.27111,0.0255,0.1250
+data/scene_s16.bin,zlib-1,2,1024,1.27111,0.0445,0.2183
+data/scene_s16.bin,zlib-1,4,1024,1.27111,0.0852,0.4118
+data/scene_s16.bin,zlib-1,8,1024,1.27111,0.1125,0.5596
+data/scene_s16.bin,lz4,1,1024,0.99612,2.5648,4.7658
+data/scene_s16.bin,lz4,2,1024,0.99612,4.2168,5.1202
+data/scene_s16.bin,lz4,4,1024,0.99612,4.8192,5.0425
+data/scene_s16.bin,lz4,8,1024,0.99612,4.5372,4.6205
+data/scene_s16.bin,zstd-1,1,1024,1.29164,0.3551,0.7450
+data/scene_s16.bin,zstd-1,2,1024,1.29164,0.6981,1.4321
+data/scene_s16.bin,zstd-1,4,1024,1.29164,1.3285,2.5660
+data/scene_s16.bin,zstd-1,8,1024,1.29164,1.4669,2.8711
+data/scene_s16.bin,zstd-3,1,1024,1.31809,0.0777,0.4207
+data/scene_s16.bin,zstd-3,2,1024,1.31809,0.1544,0.8299
+data/scene_s16.bin,zstd-3,4,1024,1.31809,0.2548,1.5961
+data/scene_s16.bin,zstd-3,8,1024,1.31809,0.1135,1.8074
+data/scene_s16.bin,[seul] bitshuffle scalaire,1,1024,1.00000,0.1913,0.3528
+data/scene_s16.bin,[seul] bitshuffle scalaire,2,1024,1.00000,0.3417,0.6193
+data/scene_s16.bin,[seul] bitshuffle scalaire,4,1024,1.00000,0.6658,1.1878
+data/scene_s16.bin,[seul] bitshuffle scalaire,8,1024,1.00000,1.1630,1.3758
+data/scene_s16.bin,[seul] bitshuffle AVX2,1,1024,1.00000,1.7799,1.8102
+data/scene_s16.bin,[seul] bitshuffle AVX2,2,1024,1.00000,2.9739,3.1384
+data/scene_s16.bin,[seul] bitshuffle AVX2,4,1024,1.00000,3.0534,3.5552
+data/scene_s16.bin,[seul] bitshuffle AVX2,8,1024,1.00000,2.6502,2.7441
+data/scene_s16.bin,[seul] delta + zigzag + bitshuffle,1,1024,1.00000,1.7897,1.5723
+data/scene_s16.bin,[seul] delta + zigzag + bitshuffle,2,1024,1.00000,3.2860,2.3539
+data/scene_s16.bin,[seul] delta + zigzag + bitshuffle,4,1024,1.00000,3.0827,1.9615
+data/scene_s16.bin,[seul] delta + zigzag + bitshuffle,8,1024,1.00000,2.6680,1.7498
+data/scene_s16.bin,shuffle + lz4,1,1024,1.42275,0.5643,1.5674
+data/scene_s16.bin,shuffle + lz4,2,1024,1.42275,1.0051,2.6785
+data/scene_s16.bin,shuffle + lz4,4,1024,1.42275,1.7508,3.0568
+data/scene_s16.bin,shuffle + lz4,8,1024,1.42275,2.1442,2.7026
+data/scene_s16.bin,shuffle + zstd-1,1,1024,1.76402,0.3993,0.8864
+data/scene_s16.bin,shuffle + zstd-1,2,1024,1.76402,0.7044,1.5907
+data/scene_s16.bin,shuffle + zstd-1,4,1024,1.76402,1.2988,2.4046
+data/scene_s16.bin,shuffle + zstd-1,8,1024,1.76402,1.4572,2.4661
+data/scene_s16.bin,bitshuffle + lz4,1,1024,1.24473,0.4232,1.3595
+data/scene_s16.bin,bitshuffle + lz4,2,1024,1.24473,0.7464,2.3877
+data/scene_s16.bin,bitshuffle + lz4,4,1024,1.24473,1.4329,3.1615
+data/scene_s16.bin,bitshuffle + lz4,8,1024,1.24473,1.7539,2.6575
+data/scene_s16.bin,bitshuffle + zstd-1,1,1024,1.73710,0.5411,1.2447
+data/scene_s16.bin,bitshuffle + zstd-1,2,1024,1.73710,0.9602,2.1974
+data/scene_s16.bin,bitshuffle + zstd-1,4,1024,1.73710,1.7220,3.2668
+data/scene_s16.bin,bitshuffle + zstd-1,8,1024,1.73710,1.7680,2.7218
+data/scene_s16.bin,zigzag + bitshuffle + lz4,1,1024,1.80771,0.6684,1.3606
+data/scene_s16.bin,zigzag + bitshuffle + lz4,2,1024,1.80771,1.1681,2.1648
+data/scene_s16.bin,zigzag + bitshuffle + lz4,4,1024,1.80771,1.7584,1.9366
+data/scene_s16.bin,zigzag + bitshuffle + lz4,8,1024,1.80771,1.7861,1.7280
+data/scene_s16.bin,zigzag + bitshuffle + zstd-1,1,1024,1.91530,0.4048,0.9261
+data/scene_s16.bin,zigzag + bitshuffle + zstd-1,2,1024,1.91530,0.6990,1.5362
+data/scene_s16.bin,zigzag + bitshuffle + zstd-1,4,1024,1.91530,1.2167,1.7517
+data/scene_s16.bin,zigzag + bitshuffle + zstd-1,8,1024,1.91530,1.2710,1.7183
+data/scene_s16.bin,delta + zigzag + bitshuffle + lz4,1,1024,2.27279,0.9797,1.4806
+data/scene_s16.bin,delta + zigzag + bitshuffle + lz4,2,1024,2.27279,1.7701,2.4305
+data/scene_s16.bin,delta + zigzag + bitshuffle + lz4,4,1024,2.27279,3.1988,2.1328
+data/scene_s16.bin,delta + zigzag + bitshuffle + lz4,8,1024,2.27279,3.1209,1.7502
+data/scene_s16.bin,delta + zigzag + bitshuffle scalaire + zstd-1,1,1024,2.42840,0.1549,0.3054
+data/scene_s16.bin,delta + zigzag + bitshuffle scalaire + zstd-1,2,1024,2.42840,0.2696,0.5202
+data/scene_s16.bin,delta + zigzag + bitshuffle scalaire + zstd-1,4,1024,2.42840,0.5205,0.9720
+data/scene_s16.bin,delta + zigzag + bitshuffle scalaire + zstd-1,8,1024,2.42840,0.8452,1.1305
+data/scene_s16.bin,delta + zigzag + bitshuffle + zstd-1,1,1024,2.42840,0.5879,1.0415
+data/scene_s16.bin,delta + zigzag + bitshuffle + zstd-1,2,1024,2.42840,1.0355,1.7786
+data/scene_s16.bin,delta + zigzag + bitshuffle + zstd-1,4,1024,2.42840,1.9158,1.9416
+data/scene_s16.bin,delta + zigzag + bitshuffle + zstd-1,8,1024,2.42840,1.8903,1.7052
+data/scene_s16.bin,delta + zigzag + bitshuffle + zstd--1,1,1024,2.32342,0.7552,1.2784
+data/scene_s16.bin,delta + zigzag + bitshuffle + zstd--1,2,1024,2.32342,1.3421,2.1504
+data/scene_s16.bin,delta + zigzag + bitshuffle + zstd--1,4,1024,2.32342,2.3263,2.0421
+data/scene_s16.bin,delta + zigzag + bitshuffle + zstd--1,8,1024,2.32342,2.3033,1.7503
+data/scene_s16.bin,blosc2 shuffle + lz4,1,1024,1.31852,0.5082,1.2397
+data/scene_s16.bin,blosc2 shuffle + lz4,2,1024,1.31852,0.9162,2.1719
+data/scene_s16.bin,blosc2 shuffle + lz4,4,1024,1.31852,1.8099,3.6185
+data/scene_s16.bin,blosc2 shuffle + lz4,8,1024,1.31852,2.9458,4.5745
+data/scene_s16.bin,blosc2 bitshuffle + lz4,1,1024,1.57959,0.5148,1.2900
+data/scene_s16.bin,blosc2 bitshuffle + lz4,2,1024,1.57959,0.9257,2.2613
+data/scene_s16.bin,blosc2 bitshuffle + lz4,4,1024,1.57959,1.8906,3.9485
+data/scene_s16.bin,blosc2 bitshuffle + lz4,8,1024,1.57959,2.5727,4.1596
+data/scene_s16.bin,blosc2 bitshuffle + zstd-1,1,1024,1.13760,0.5365,1.3316
+data/scene_s16.bin,blosc2 bitshuffle + zstd-1,2,1024,1.13760,0.9562,2.4027
+data/scene_s16.bin,blosc2 bitshuffle + zstd-1,4,1024,1.13760,1.8356,4.0368
+data/scene_s16.bin,blosc2 bitshuffle + zstd-1,8,1024,1.13760,2.2236,4.2796
